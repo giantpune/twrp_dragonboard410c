@@ -1,0 +1,10 @@
+/system       ext4          /dev/block/platform/soc.0/by-name/system
+/data         ext4          /dev/block/platform/soc.0/by-name/userdata   flags=rw,seclabel,nosuid,nodev,relatime,discard,noauto_da_alloc,data=ordered
+/cache        auto          /dev/block/platform/soc.0/by-name/cache
+/boot         emmc          /dev/block/platform/soc.0/by-name/boot
+/recovery     emmc          /dev/block/platform/soc.0/by-name/recovery
+/persist      ext4          /dev/block/platform/soc.0/by-name/persist    flags=rw,seclabel,nosuid,nodev,relatime,data=ordered
+/firmware     vfat          /dev/block/platform/soc.0/by-name/modem      flags=ro,context=u:object_r:firmware_file:s0,relatime,uid=1000,gid=1000,fmask=0337,dmask=0227,codepage=437,iocharset=iso8859-1,shortname=lower,errors=remount-ro
+
+/external_sd  auto          /dev/block/mmcblk1p1  /dev/block/mmcblk1     flags=display="Micro SDcard";storage;wipeingui;removable;andsec
+/usb_otg      auto          /devices/platform/msm_hsusb                  flags=display="USB-OTG";storage;wipeingui;removable
